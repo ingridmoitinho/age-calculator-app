@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,700;1,400;1,800&display=swap");
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--off-white);
+    align-items: center;
+    margin-top: 6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background-color: var(--white);
+    width: 35vw;
+    height: 65vh;
+    max-width: 80%;
+    padding: 2rem;
+    position: relative;
+    border-bottom-right-radius: 150px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    border-bottom: 2px solid var(--off-white);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+input {
+    width: 7vw;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid var(--off-white);
+    outline: none;
+    font-weight: 700;
+}
+
+.input-error-span {
+    color: var(--light-red);
+}
+
+input:focus {
+    border: 1px solid var(--purple);
+}
+
+.input-error {
+    border: 1px solid var(--light-red);
+}
+
+input:focus.input-error {
+    border-color: var(--light-red);
+}
+
+small {
+    color: var(--light-red);
+    width: vw;
+    font-size: 0.5rem;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+img {
+    width: 1.5vw;
+}
+
+.submit-btn {
+    width: 3rem;
+    height: 7vh;
+    background-color: var(--purple);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 2.5rem;
+    top: 6rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
+
+.output {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.output span {
+    font-size: 3.5rem;
+    color: var(--purple);
+    padding-right: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 375px) and (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: 375px;
+        height: 60%;
+    }
+
+    input {
+        width: 100%;
+        font-weight: 800;
+        font-size: 1rem;
+        top: 2em;
+    }
+
+    .output {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .output span {
+        font-size: 3rem;
+    }
+
+    img {
+        width: 8vw;
+    }
+
+    .submit-btn {
+        position: absolute;
+        left: 50%;
+        top: 7rem;
+        cursor: pointer;
+    }
+
+    .submit-btn img {
+        transform: scale(0.5);
+    }
+}
